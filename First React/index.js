@@ -9,51 +9,12 @@
 //                         <h2>We are happy you are using React JS.</h2>
 //                         <p>Welcome to React</p>
 //                     </nav>);
+import Header from "./Header"
+import MainContent from "./MainContent"
+import Footer from "./Footer"
 
-function Header() {
-    return(
-        <div>
-            <header>
-                <nav className="nav">
-                    <img className="nav-logo" src="aquana-pic.png" alt="sorry" />
-                    <ul className="nav-items">
-                        <li>Pricing</li>
-                        <li>About</li>
-                        <li>Contact Us</li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-    )
-}
 
-function MainContent(){
-    return(
-        <div className="content-body">
-        <h1>Welcome to this Page</h1>
-            <p>This is the Best Javascript Library</p>
-            <ol>
-                <li>It is a hirable skill</li>
-                <li>It is well maintained</li>
-                <li>It's error handling is good.</li>
-                <li>It is a great skill to learn</li>
-            </ol>
-        </div>
-    )
-}
-
-function Footer() {
-    return(
-
-        <div>
-            <footer className="footer-text">
-               <small> © 2022 Mespa Developers. All Rights Reserved.</small>
-            </footer>
-        </div>
-    )
-}
-
-function Page(){
+function App(){
     return(
         <div>
         <Header/>
@@ -63,7 +24,7 @@ function Page(){
     )
 }
 
-ReactDOM.render(<Page />,
+ReactDOM.render(<App />,
     document.getElementById("root"))
 
 
