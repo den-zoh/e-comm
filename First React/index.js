@@ -1,30 +1,49 @@
-// const page = (<nav>
-//                     <img src="aquana-pic.png" width="40px" />
-//                     <h1 className="header">Aquana</h1>
-//                     <ul>
-//                         <li>Menu</li>
-//                         <li>About</li>
-//                         <li>Contact</li>
-//                     </ul>
-//                         <h2>We are happy you are using React JS.</h2>
-//                         <p>Welcome to React</p>
-//                     </nav>);
-import Header from "./Header"
-import MainContent from "./MainContent"
-import Footer from "./Footer"
-
-
-function App(){
+function Header() {
     return(
         <div>
-        <Header/>
-        <MainContent />
-        <Footer/>
+            <header>
+                <nav className="nav">
+                    <img className="nav-logo" src="aquana-pic.png" alt="sorry" />
+                    <ul className="nav-items">
+                        <li>Pricing</li>
+                        <li>About</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </nav>
+            </header>
         </div>
     )
 }
 
-ReactDOM.render(<App />,
+
+function MainContent(){
+    return(
+        <div className="content-body">
+        <h1>Welcome to this Page</h1>
+            <p>This is the Best Javascript Library</p>
+            <ol>
+                <li>It is a hirable skill</li>
+                <li>It is well maintained</li>
+                <li>It's error handling is good.</li>
+                <li>It is a great skill to learn</li>
+            </ol>
+        </div>
+    )
+}
+
+function Footer() {
+    return(
+        <div>
+           <Header/>
+            <MainContent />
+            <footer className="footer-text">
+               <small> © 2022 Mespa Developers. All Rights Reserved.</small>
+            </footer>
+        </div>
+    )
+}
+
+ReactDOM.render(<Footer />,
     document.getElementById("root"))
 
 
